@@ -1,6 +1,6 @@
 # Jsong
 
-[![Build Status](https://secure.travis-ci.org/caike/jsong.png)](http://travis-ci.org/caike/jsong)
+[![Build Status](http://img.shields.io/travis/caike/jsong.svg)](http://travis-ci.org/caike/jsong)
 
 This is a library that serializes JSON-API for Node HTTP.
 
