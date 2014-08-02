@@ -1,6 +1,6 @@
 var http = require('http');
 var request = require('supertest');
-var serializer = require('..');
+var jsong = require('..');
 
 var guitars = [{ company: 'Gibson' },
   { company: 'Jackson'}];
@@ -26,7 +26,7 @@ function parseResponse(json) {
 }
 
 function createServer(){
-  var jsonAPI = serializer();
+  var jsonAPI = jsong.jsonAPI();
 
   return http.createServer(function (req, res) {
     jsonAPI(req, res, function onDone() {
