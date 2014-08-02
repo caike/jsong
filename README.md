@@ -1,7 +1,6 @@
 # Jsong
 
-This is a library that parses the JSON-API format for
-Node HTTP.
+This is a library that serializes JSON-API for Node HTTP.
 
 Example using Express:
 
