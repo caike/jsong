@@ -1,5 +1,7 @@
 # Jsong
 
+[![Build Status](https://secure.travis-ci.org/caike/jsong.png)](http://travis-ci.org/caike/jsong)
+
 This is a library that serializes JSON-API for Node HTTP.
 
 Example using Express:
