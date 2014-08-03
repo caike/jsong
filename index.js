@@ -16,8 +16,10 @@ jsong.jsonAPI = function () {
     response.jsonAPI = function (data, options) {
       response.setHeader('Content-Type', 'application/json');
 
+      var rootElement = options.collection || options.model;
       var responseData = {};
-      responseData[options.collection] = data
+
+      responseData[rootElement] = data
       response.end(JSON.stringify(responseData));
     }
 
