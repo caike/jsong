@@ -6,7 +6,10 @@ var guitars = [{ company: 'Gibson' },
   { company: 'Jackson'}];
 
 describe('Serializing', function () {
+
   describe('collection', function () {
+
+
     it('includes root element', function (done) {
 
       var guitarResponse = {
@@ -18,7 +21,15 @@ describe('Serializing', function () {
         .expect(JSON.stringify(guitarResponse))
         .expect(200, done);
     });
+
+    it('responds with proper Content-Type', function (done) {
+      request(createServer())
+        .get('/')
+        .expect('Content-Type', 'application/json')
+        .expect(200, done);
+    })
   });
+
 });
 
 function parseResponse(json) {

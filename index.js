@@ -11,12 +11,14 @@ module.exports = jsong = {};
 jsong.jsonAPI = function () {
 
 
-  return function(req, res, next) {
+  return function(request, response, next) {
 
-    res.jsonAPI = function (data, options) {
+    response.jsonAPI = function (data, options) {
+      response.setHeader('Content-Type', 'application/json');
+
       var responseData = {};
       responseData[options.collection] = data
-      res.end(JSON.stringify(responseData));
+      response.end(JSON.stringify(responseData));
     }
 
     next();
